@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  pyspark-notebook:
+      container_name: pyspark-notebook
+      build: .
+      environment: 
+        - JUPYTER_ENABLE_LAB=yes
+      volumes:
+        - $HOME/Notebooks/:/home/jovyan
+      ports:
+        - 8888:8888
